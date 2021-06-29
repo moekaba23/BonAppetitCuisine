@@ -17,13 +17,17 @@ nav {
 }
 
 nav img {
-  width: 150px;
-
+  width: 200px;
 }
 
-.nav-links {
-  flex: 1;
-  text-align: right;
+.nav-contact{
+  text-align: center;
+}
+
+.nav-contact ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 10px;
 }
 
 .nav-links ul li {
@@ -58,25 +62,34 @@ nav img {
   transition: 0.5s;
 }
 
+
 .pictures {
-  flex-basis: 90%;
-  border-radius: 20px;
-  margin: auto;
-  position: relative;
+  max-height: 700px;
   overflow: hidden;
+  /*filter: opacity(70%) contrast(120%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5), url(images/background-food.jpg));*/
 }
 
 .pictures img {
-  display: block;
-  margin: auto;
-  max-height: 640px;
+  max-height: 1000px;
 }
 
-.delivery {
+.mid-section {
   width: 80%;
   margin: auto;
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   text-align: center;
+}
+
+.about-story {
+  color: #ffff;
+  background: #800000;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#content {
+  padding: 50px 0;
 }
 
 h1 {
@@ -118,11 +131,16 @@ p {
   transition: 0.5s;
 }
 
-.locations {
-  width: 80%;
+.food {
+  border-radius: 10px;
   margin: auto;
-  text-align: center;
-  padding: 50px 0 50px 0;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 12px;
+}
+
+.food img {
+  width: 100%;
 }
 
 .stores {
@@ -131,6 +149,7 @@ p {
   margin: auto;
   position: relative;
   overflow: hidden;
+  padding: 20px 12px;
 }
 
 .stores img {
@@ -139,21 +158,16 @@ p {
 }
 
 .footer {
-  width: 100%;
+  color: #ffff;
   background: #800000;
   text-align: center;
-  padding: 30px 0 100px;
+  padding: 50px 0;
 }
 
-.footer h3{
-  color: #ffff;
-}
-
-.footer hr {
-  width: 40%;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.footer .foot {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .icons .fa {
@@ -166,7 +180,13 @@ p {
 
 /* Code for small screens */
 
-@media(max-width :800px) {
+@media(max-width: 880px) {
+  nav:nth-child(3) {
+    display: inline-flex;
+  }
+}
+
+@media(max-width: 800px) {
   nav {
     display: block;
     align-items: center;
@@ -180,13 +200,13 @@ p {
     text-align: center;
     margin-top: 1em;
   }
+
+  .footer .foot {
+    display: block;
+  }
 }
 
-@media(max-width :700px) {
-
-  .pictures img {
-    max-width: 75vh;
-  }
+@media(max-width: 700px) {
 
   .elements {
     display: block;
