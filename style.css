@@ -66,12 +66,7 @@ nav img {
 
 .pictures {
   max-height: 700px;
-  background: url(images/background-food.jpg) no-repeat center scroll;
-  background-attachment: fixed;
-  background-size: cover;
-  /*filter: opacity(70%) contrast(120%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5), url(images/background-food.jpg));
-  overflow: hidden;*/
+  overflow: hidden;
 }
 /*
 .pictures img {
