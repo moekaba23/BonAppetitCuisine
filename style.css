@@ -72,6 +72,13 @@ nav img {
   color: white;
 }
 
+.picture-about {
+  background-image: url(images/background-food2.jpg);
+  background-size: cover;
+  isolation: isolate;
+  color: white;
+}
+
 .picture-filter{
   height: 100vh;
   position: relative;
