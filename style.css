@@ -162,13 +162,12 @@ p {
 }
 
 .elements {
-  margin: 8em 0;
+  margin: 5em 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .menu .elements {
-  margin-top: 2em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -263,6 +262,11 @@ p {
 }
 
 @media(max-width: 700px) {
+
+  .picture-filter{
+    height: 60vh;
+    position: relative;
+  }
 
   .about-story {
     font-size: 50%;
