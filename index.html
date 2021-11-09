@@ -1,114 +1,141 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Bon Appetit Cuisine</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Navbar and top of the page -->
-    <section class="header">
-      <nav>
-        <div class="logo">
-          <a href="index.html"><img src="logo.jpg" alt=""></a>
-        </div>
-        <div class="nav-contact">
-          <ul>
-            <li><i class="fa fa-phone"></i>  (734) 221-5525</li>
-            <li><i class="fa fa-map-marker"></i>  421 W Cross St Ypsilanti, MI - 48197</li>
-          </ul>
-        </div>
-        <div class="nav-links" id="navLinks">
-          <ul>
-            <a href="index.html"><li>Home</li></a>
-            <a href="about.html"><li>About</li></a>
-            <a href="#footer"><li>Contact</li></a>
-          </ul>
-        </div>
-      </nav>
-      <div class="picture">
-        <div class="picture-filter">
-          <div class="picture-text">
-            <h1>Welcome to Bon Appetit Cuisine</h1>
-            <h4>The best West African Cuisine in Michigan!</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Mid Section of the page -->
-    <section class="mid-section">
-      <!-- Delivery -->
-      <div class="delivery">
-        <h1>What We Offer</h1>
-        <div class="elements">
-          <div class="options">
-            <h3>Delivery</h3>
-            <p>We deliver throught Uber Eats, DoorDash, GrubHub and more.</p>
-          </div>
-          <div class="options">
-            <h3>Pick Up</h3>
-            <p>You can order over the phone or online and pick at the store.</p>
-          </div>
-          <div class="options">
-            <h3>Dine In</h3>
-            <p>We have seating space for up to 40 people.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Menu -->
-      <div class="menu">
-        <h1>Menu</h1>
-        <div class="elements">
-          <div class="food">
-            <img src="images/stew.jpg" alt="">
-            <p>Tomato Stew</p>
-          </div>
-          <div class="food">
-            <img src="images/atieke.jpg" alt="">
-            <p>Atieke with Fried Fish</p>
-          </div>
-          <div class="food">
-            <img src="images/pate.jpg" alt="">
-            <p>Pate</p>
-          </div>
-          <div class="food">
-            <img src="images/plantain.jpg" alt="">
-            <p>Sweet Plantain</p>
-          </div>
-        </div>
-      </div>
-      <!-- Locations -->
-      <div class="location">
-        <h1>Locations</h1>
-        <div class="store">
-          <img src="images/ypsi.jpg" alt="">
-          <p>421 W Cross St Ypsilanti, MI - 48197</p>
-        </div>
-      </div>
-    </section>
-    <!-- Footer of the page -->
-    <section class="footer" id="footer">
-      <div class="foot">
-        <h3>Bon Appetit Cuisine &#153;</h3>
-        <div class="nav-contact">
-          <ul>
-            <li><i class="fa fa-phone"></i>  (734) 221-5525</li>
-            <li><i class="fa fa-map-marker"></i>  421 W Cross St Ypsilanti, MI - 48197</li>
-          </ul>
-        </div>
-        <div class="icons">
-          <a href="https://www.facebook.com/Bonappetitcuisineypsi" target="_blank"><i class="fa fa-facebook-square"></i></a>
-          <a href="https://www.instagram.com/bonappetitcuisine_ypsi/" target="_blank"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
 
-      <p>&copy; Copyright 2021, Bon Appetit Cuisine. All rights reserved.</p>
-    </section>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Bon Appetit Cuisine</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-  </body>
+<body>
+  <!-- Navbar and top of the page -->
+  <section class="header">
+    <nav>
+      <div class="mobile_nav">
+        <a class="menu-toggle" onclick="openNav()" href="#">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt=""></a>
+      </div>
+      <div class="nav-contact">
+        <ul>
+          <li><i class="fa fa-phone"></i> (734) 221-5525</li>
+          <li><i class="fa fa-map-marker"></i> 421 W Cross St Ypsilanti, MI - 48197</li>
+        </ul>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="about.html">
+            <li>About</li>
+          </a>
+          <a href="#footer">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+      <div class="menu-overlay" id="mobile_menu">
+        <a class="close-toggle" onclick="closeNav()" href="#">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="#footer" onclick="closeNav()">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="picture">
+      <div class="picture-filter">
+        <div class="picture-text">
+          <h1>Welcome to Bon Appetit Cuisine</h1>
+          <h4>The best West African Cuisine in Michigan!</h4>
+          <a href="#">
+            <div class="order-btn">
+              ORDER NOW!
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mid Section of the page -->
+  <section class="mid-section">
+    <!-- Delivery -->
+    <div class="delivery">
+      <h1>What We Offer</h1>
+      <div class="elements">
+        <div class="options">
+          <h3>Delivery</h3>
+          <p>We deliver throught Uber Eats, DoorDash, GrubHub and more.</p>
+        </div>
+        <div class="options">
+          <h3>Pick Up</h3>
+          <p>You can order over the phone or online and pick at the store.</p>
+        </div>
+        <div class="options">
+          <h3>Dine In</h3>
+          <p>We have seating space for up to 40 people.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+      <h1>Menu</h1>
+      <div class="elements">
+        <div class="food">
+          <img src="images/stew.jpg" alt="">
+          <p>Tomato Stew</p>
+        </div>
+        <div class="food">
+          <img src="images/atieke.jpg" alt="">
+          <p>Atieke with Fried Fish</p>
+        </div>
+        <div class="food">
+          <img src="images/pate.jpg" alt="">
+          <p>Pate</p>
+        </div>
+        <div class="food">
+          <img src="images/plantain.jpg" alt="">
+          <p>Sweet Plantain</p>
+        </div>
+      </div>
+    </div>
+    <!-- Locations -->
+    <div class="location">
+      <h1>Locations</h1>
+      <div class="store">
+        <img src="images/ypsi.jpg" alt="">
+        <p>421 W Cross St Ypsilanti, MI - 48197</p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer of the page -->
+  <section class="footer" id="footer">
+    <div class="foot">
+      <h3>Bon Appetit Cuisine &#153;</h3>
+      <div class="nav-contact">
+        <ul>
+          <li><i class="fa fa-phone"></i> (734) 221-5525</li>
+          <li><i class="fa fa-map-marker"></i> 421 W Cross St Ypsilanti, MI - 48197</li>
+        </ul>
+      </div>
+      <div class="icons">
+        <a href="https://www.facebook.com/Bonappetitcuisineypsi" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/bonappetitcuisine_ypsi/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <p>&copy; Copyright 2021, Bon Appetit Cuisine. All rights reserved.</p>
+  </section>
+  <script type="text/javascript" src="mobile.js"></script>
+</body>
+
 </html>
