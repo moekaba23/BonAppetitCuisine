@@ -64,6 +64,58 @@ nav img {
   transition: 0.5s;
 }
 
+.mobile_nav {
+  display: none;
+}
+
+.menu-toggle {
+  color: #000;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  text-decoration: none;
+}
+
+.menu-overlay {
+  height: 70%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, .9);
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay-content {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-overlay a {
+  padding: 1em;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-overlay a:hover {
+  color: #800000;
+}
+
+.menu-overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 4em;
+}
+
 .picture {
   background-image: url(images/background-food.jpg);
   background-size: cover;
@@ -95,6 +147,26 @@ nav img {
 .picture-text {
   padding: 10em 5em;
   line-height: 3em;
+}
+
+.picture-text a {
+  text-decoration: none;
+}
+
+.order-btn {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.25em;
+  font-weight: 700;
+  width: 10em;
+  margin: 2em 0;
+}
+
+.order-btn:hover {
+  background-color: #d9d9d9;
+  transition: all .5s ease;
 }
 
 .mid-section {
@@ -260,6 +332,16 @@ p {
 }
 
 @media(max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: inherit;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .elements {
     display: grid;
     grid-template-columns: repeat(1, minmax(180px, 1fr));
