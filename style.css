@@ -71,8 +71,6 @@ nav img {
 .menu-toggle {
   color: #000;
   font-size: 1.5em;
-  margin-bottom: 2em;
-  text-decoration: none;
 }
 
 .menu-overlay {
@@ -332,8 +330,17 @@ p {
 }
 
 @media(max-width: 700px) {
+  .logo {
+    margin-top: 2em;
+  }
+
   .nav-links {
     display: none;
+  }
+
+  .menu-toggle {
+    position: fixed;
+    z-index: 1;
   }
 
   .mobile_nav {
@@ -353,7 +360,7 @@ p {
   }
 
   .picture-filter {
-    height: 60vh;
+    height: auto;
     position: relative;
   }
 
