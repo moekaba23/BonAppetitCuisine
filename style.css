@@ -70,7 +70,16 @@ nav img {
 
 .menu-toggle {
   color: #000;
-  font-size: 1.5em;
+  font-size: 1.75em;
+}
+
+.close-toggle {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 4em;
 }
 
 .menu-overlay {
@@ -94,24 +103,13 @@ nav img {
   justify-content: center;
 }
 
-.menu-overlay a {
+.overlay-content a {
   padding: 1em;
   font-size: 1.5em;
   color: #fff;
   text-decoration: none;
   display: block;
   transition: all 0.3s ease 0s;
-}
-
-.menu-overlay a:hover {
-  color: #800000;
-}
-
-.menu-overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 4em;
 }
 
 .picture {
@@ -347,6 +345,7 @@ p {
     display: inherit;
     display: flex;
     justify-content: flex-end;
+    z-index: 2;
   }
 
   .elements {
