@@ -205,6 +205,10 @@ h3 {
   margin: 1em 0;
 }
 
+h4 {
+  padding: 1em;
+}
+
 p {
   color: #737373;
   font-size: 1em;
@@ -250,6 +254,10 @@ p {
   box-shadow: .1em .1em .5em;
 }
 
+.food p {
+  padding: 0;
+}
+
 .store {
   max-width: 500px;
   max-height: 500px;
@@ -270,6 +278,11 @@ p {
   margin-top: 5em;
   text-align: center;
   padding: 3em 0;
+}
+
+.footer p {
+  color: #ffff;
+  font-size: 0.75em;
 }
 
 .foot {
